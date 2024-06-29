@@ -1,2 +1,6 @@
 __pycache__
 /results/ekar_aggr/
+*env*
+.ipynb_checkpoints
+ThoughtExperiment.ipynb
+*.ipynb

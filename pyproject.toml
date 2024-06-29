@@ -1,0 +1,44 @@
+[tool.poetry]
+name = "knowledge-harvest-from-lms"
+version = "0.1.0"
+description = "An implementation of BertNet: Harvesting Knowledge Graphs with Arbitrary Relations from Pretrained Language Models as described in https://arxiv.org/pdf/2206.14268."
+authors = [
+    "Shibo Hao <s5hao@ucsd.edu>",
+    "Bowen Tan <btan2@cs.cmu.edu",
+    "Kaiwen Tang",
+    "Ted Johnson <tjohnson@somalogic.com>",
+    "Zhiting Hu <zhh019@ucsd.edu>"
+    ]
+homepage = "http://zhiting.ucsd.edu/"
+repository = "https://github.com/tanyuqian/knowledge-harvest-from-lms"
+keywords = ["transformer model", "gnowledge graph", "natural language processing", "large language model"]
+readme = "README.md"
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+transformers = "^4.41.2"
+torch = "^2.3.1"
+fire = "^0.6.0"
+tqdm = "^4.66.4"
+scipy = "^1.13.1"
+nltk = "^3.8.1"
+openai = "^1.35.3"
+thefuzz = "^0.22.1"
+prettytable = "^3.10.0"
+setuptools-rust = "^1.9.0"
+pydantic = "^2.7.4"
+ollama = "^0.2.1"
+
+[tool.poetry.scripts]
+bertnet = "knowledge_harvest_from_lms.main:run_main_cli"
+bertnet_search_prompts = "knowledge_harvest_from_lms.search_prompts:fire_search_promts"
+bertnet_present_result = "knowledge_harvest_from_lms.present_result.py:fire_present_result"
+[tool.poetry.group.dev.dependencies]
+jupyterlab = "^4.2.2"
+pytest = "^8.2.2"
+pre-commit = "^3.7.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

@@ -25,4 +25,8 @@ repos:
     rev: v2.2.4
     hooks:
     -   id: codespell
-        exclude: README.ipynb
+        exclude: >
+            (?x)^(
+                .*\.json|.*\.txt|.*\.lock
+            )$
+        args: ["--ignore-words-list", "lama"]

@@ -1,0 +1,22 @@
+[
+    [
+        "Instead of \"<ENT0>\" you could say \"<ENT1>\" .",
+        0.24663709918374055
+    ],
+    [
+        "<ENT0> is the study of <ENT1> .",
+        0.21966815296739972
+    ],
+    [
+        "The <ENT0> is the <ENT1> to the room .",
+        0.20229170614105177
+    ],
+    [
+        "<ENT1> = <ENT0> .",
+        0.18378435071501853
+    ],
+    [
+        "<ENT1> is a more accurate term for <ENT0> .",
+        0.14761869099278938
+    ]
+]

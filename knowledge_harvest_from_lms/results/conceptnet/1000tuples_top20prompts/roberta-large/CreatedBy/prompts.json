@@ -1,0 +1,34 @@
+[
+    [
+        "A <ENT1> is someone who makes <ENT0> .",
+        0.19608726884953354
+    ],
+    [
+        "A <ENT1> is a person who oversees the production of a <ENT0> .",
+        0.1742660112197729
+    ],
+    [
+        "The person responsible for creating a <ENT0> is called the <ENT1> .",
+        0.14305682301867373
+    ],
+    [
+        "A <ENT1> is a musician who creates <ENT0>s .",
+        0.12754354411037985
+    ],
+    [
+        "The word \"<ENT1>\" refers to the person who creates or prepares <ENT0> .",
+        0.10320896685648036
+    ],
+    [
+        "A <ENT1> is an individual who bakes <ENT0> .",
+        0.09818903440249482
+    ],
+    [
+        "One function of the <ENT1> is to lay <ENT0>s .",
+        0.08049361355548
+    ],
+    [
+        "A <ENT1> is a person who helps to create a <ENT0> by coordinating the different elements that go into making it .",
+        0.07715473798718485
+    ]
+]
