@@ -33,7 +33,7 @@ ollama = "^0.2.1"
 [tool.poetry.scripts]
 bertnet = "knowledge_harvest_from_lms.main:run_main_cli"
 bertnet_search_prompts = "knowledge_harvest_from_lms.search_prompts:fire_search_promts"
-bertnet_present_result = "knowledge_harvest_from_lms.present_result.py:fire_present_result"
+bertnet_present_result = "knowledge_harvest_from_lms.present_result:fire_present_result"
 [tool.poetry.group.dev.dependencies]
 jupyterlab = "^4.2.2"
 pytest = "^8.2.2"

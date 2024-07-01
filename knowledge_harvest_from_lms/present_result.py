@@ -2,6 +2,7 @@ import json
 import os
 import random
 import sys
+from pathlib import Path
 
 import fire
 from prettytable import PrettyTable
@@ -9,9 +10,25 @@ from prettytable import PrettyTable
 # TODO: Need configurable paths for I/O
 
 
+def match_sources(input_path: Path) -> Path:
+    """Match the relation source name from the input path return a ./relation_info/{relations_source}.json path."""
+    path_parts = set(input_path.parts)
+    relation_info_dir = Path(__file__).parent
+    relation_info_dir = relation_info_dir / 'relation_info'
+    for f_ in os.listdir(relation_info_dir):
+        file_ = Path(f_)
+        if os.path.isfile(relation_info_dir / file_):
+            if file_.stem in path_parts:
+                return relation_info_dir / file_
+    raise ValueError(
+        f'The input path cannot be matched to a file in {relation_info_dir}'
+    )
+
+
 def main(result_dir, n_present=20):
-    rel_set = result_dir.split('/')[1]
-    relation_info = json.load(open(f'relation_info/{rel_set}.json'))
+    result_dir = Path(result_dir)
+    rel_set = match_sources(result_dir)
+    relation_info = json.load(open(rel_set))
 
     summary_file = open(f'{result_dir}/summary.txt', 'w')
 
